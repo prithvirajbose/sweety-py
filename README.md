@@ -18,5 +18,3 @@ Python 2.7.10 Samples
 - Object and Classes
 - Inheritance and polymorphism
 - Operator overloading
-
-

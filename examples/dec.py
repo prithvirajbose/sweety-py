@@ -8,7 +8,7 @@ def imperative(list):
       return sum
 
 def declarative(list):
-      return reduce(lambda element, running_count: element + running_count, list)
+      return reduce(lambda running_count, element: element + running_count, list)
 
 if __name__ == '__main__':
 

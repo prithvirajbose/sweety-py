@@ -1,5 +1,5 @@
 
-class Account:
+class Account(object):
       def __init__(self, __id, __name, __balance):
             self.__id = __id
             self.__name = __name

@@ -1,5 +1,5 @@
 
-class Account:
+class Account(object):
       def __init__(self, id, name, balance, limit = 1000):
       #limit set to 1000 by default
             if balance < limit:
@@ -30,9 +30,8 @@ if __name__ == '__main__':
       ac = Account(100, 'John Doe', 1000)
       print '> initial state of a/c: ', str(ac)
 
-      ac.withdraw(50)
-      print '> state of a/c after withdrawing: ', str(ac)
-
       ac.deposit(150)
       print '> state of a/c after depositing: ', str(ac)
-      
+
+      ac.withdraw(50)
+      print '> state of a/c after withdrawing: ', str(ac)      

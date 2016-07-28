@@ -1,5 +1,5 @@
 
-class LifeCycle:
+class LifeCycle(object):
       def __init__(self):
             print '__init__ called...'
 

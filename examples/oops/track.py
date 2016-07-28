@@ -1,4 +1,4 @@
-class Track:
+class Track(object):
       # class level private variable tracking the instance count
       __instance_count = 0
 

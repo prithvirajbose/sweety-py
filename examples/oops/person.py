@@ -1,5 +1,5 @@
 
-class Person:
+class Person(object):
       """
       A class to model a person.
       Attributes: name, age

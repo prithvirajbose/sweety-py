@@ -1,13 +1,12 @@
-from unittest import defaultTestLoader 
-from unittest import TextTestRunner
+import unittest
 
 if __name__ == '__main__':
       
-      suite = defaultTestLoader\
+      suite = unittest.defaultTestLoader\
               .loadTestsFromNames(\
                     ['sample_test.SampleTest'])
 
       # returns TestResult instance
-      TextTestRunner(verbosity=2).run(suite)
+      unittest.TextTestRunner(verbosity=2).run(suite)
 
 

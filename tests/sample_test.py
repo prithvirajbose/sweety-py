@@ -1,12 +1,11 @@
 
 import unittest
-from sys import platform
-from unittest import TestCase
+import sys
 
 def div(x, y):
       return x/y
 
-class SampleTest(TestCase):
+class SampleTest(unittest.TestCase):
 
       @classmethod
       def setpUpClass(cls):
@@ -32,7 +31,7 @@ class SampleTest(TestCase):
       def test_skip(self):
             pass
 
-      @unittest.skipIf(platform == 'win32', 'test not for windows platform')
+      @unittest.skipIf(sys.platform == 'win32', 'test not for windows platform')
       def test_skipIf(self):
             pass
 

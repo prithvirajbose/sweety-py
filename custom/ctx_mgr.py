@@ -2,6 +2,18 @@
 import socket
 
 class SocketClient(object):
+      """
+      Demostrates how to use the context manager in a context of a
+      client socket.
+      
+      A simple socket client to send data to a server socket.
+      Use 'nc -l port_number' or  -lk port_number' to send data
+      to the client.
+      
+      For the unfortunate ones stuck with Windows OS, I've
+      written a Java socket server class named ServerSocket.java.
+      Run that class to receive message from this client.
+      """
       def __init__(self, hostname = 'localhost', port = 2016):
             self._socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             self._hostname = hostname

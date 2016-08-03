@@ -10,7 +10,7 @@ from contextlib import contextmanager
 def socket_client_ctx(socketclient):
       """
       Demostrates how to use the context manager decorator
-      in the context of a client socket.
+      to create a generator based context manager.
       """
       try:
             socketclient.connect()
@@ -22,9 +22,6 @@ def socket_client_ctx(socketclient):
 
 class SocketClient(object):
       """
-      Demostrates how to use the context manager in a context of a
-      client socket.
-      
       A simple socket client to send data to a server socket.
       On Unix, use 'nc -l port_number' or  'nc -lk port_number' to send data
       to the client.
@@ -51,8 +48,7 @@ class SocketClient(object):
 
 class SocketClientContext(object):
       """
-      Demostrates how to use the context manager in a context of the
-      client socket.
+      Demostrates how to use the context manager as a class.
       """
       def __init__(self, socket_client):
             self._socket_client = socket_client
@@ -67,11 +63,13 @@ class SocketClientContext(object):
             self._socket_client.close()
             return False
 
-if __name__ == '__main__':\
+if __name__ == '__main__':
       '''
       This has the same effect:
             with SocketClientContext(SocketClient())as s:
       '''
-      with socket_client_ctx(SocketClient())as s:
-            s.send('test data')
-      
+      try:
+            with socket_client_ctx(SocketClient())as s:
+                  s.send('test data')
+      except Exception as e:
+            print e

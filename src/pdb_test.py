@@ -11,7 +11,7 @@ def array_div(array1, array2):
     return result
 
 if __name__ == '__main__':
-      array1 = [4, 3, 5, 7]
+      array1 = [4, 3, 5, 7, 1]
       array2 = [2.0, 2.0, 2.0, 3.0]
       
       print array_div(array1, array2)

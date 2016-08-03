@@ -1,7 +1,7 @@
 
 if __name__ == '__main__':
 
-      existingFile = 'README.md'
+      existingFile = '../../README.md'
       notExistingFile = 'someFile.txt'
       try:
             with open(notExistingFile) as f:

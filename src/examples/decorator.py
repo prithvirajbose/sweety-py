@@ -17,6 +17,12 @@ def div_validator(div):
       """
             This function returns a function that provides
             safe division (avoiding division by zero).
+
+            Corresponding lambda expression,
+            
+            return lambda dividend, divisor: div(dividend, divisor) \
+                  if divisor != 0 else None
+
       """
       def div_wrapper(dividend, divisor):
             if divisor != 0:

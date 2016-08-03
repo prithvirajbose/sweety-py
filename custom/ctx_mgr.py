@@ -7,7 +7,7 @@ class SocketClient(object):
       client socket.
       
       A simple socket client to send data to a server socket.
-      Use 'nc -l port_number' or  -lk port_number' to send data
+      On Unix, use 'nc -l port_number' or  'nc -lk port_number' to send data
       to the client.
       
       For the unfortunate ones stuck with Windows OS, I've

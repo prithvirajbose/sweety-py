@@ -25,12 +25,20 @@ def myfilter(function, data):
       return res
 
 #assignment solution
-def myreduce(function, data):
-      res = 1
-      for i in data[1:]:
-            res = function(res, i)
+def myreduce(function, data, init = None):
+      it = iter(data)
+      
+      if init is None:
+            try:
+                  init = next(it)
+            except StopIteration:
+                  raise TypeError('Iterable data is empty.')
 
-      return res
+      acc = init
+      for i in it:
+            acc = function(acc, i)
+
+      return acc
 
 def square(n):
       return n ** 2
@@ -45,5 +53,7 @@ if __name__ == '__main__':
       #test for myfilter
       print myfilter(lambda x: x % 2 == 0, range(1, 11))
       #test for myreduce
-      print myreduce(lambda acc, x: acc + x, range(1, 5))
+      print myreduce(lambda acc, x: acc * x, range(1, 5))
+      print myreduce(lambda acc, x: acc + x, range(1, 11))
+      print myreduce(lambda acc, x: acc + x, range(1, 1))
 

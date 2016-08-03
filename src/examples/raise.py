@@ -6,10 +6,10 @@ if __name__ == '__main__':
             
             if x <= 10:
                   # raise exception with module name, error code and msg
-                  raise ValueError(__name__, -1, 'value less than 10')
+                  raise ValueError('value less than 10', __name__, -1)
             
       except ValueError as e:
-            module, code, msg = e.args # unpacking arguments
-            print 'module={0}, err_code={1}, msg={2}'.format(module, code, msg)
+            msg, module, code = e.args # unpacking arguments
+            print 'module={1}, err_code={2}, msg={0}'.format(msg, module, code)
 
 

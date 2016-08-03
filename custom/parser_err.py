@@ -21,11 +21,11 @@ if __name__ == '__main__':
         print e
 
     try:
-        raise ParserError('Error parsing file...', 'marker.json')
+        raise ParserError('Error parsing file...', __name__)
     except ParserError as e:
         print e
 
     try:
-        raise ParserError('Error parsing file...', 'marker.json', 13)
+        raise ParserError('Error parsing file...', __name__, 13)
     except ParserError as e:
         print e

@@ -1,16 +1,19 @@
 
+# function with variable and keyword arguments
 def with_args_kwargs(a, *args, **kwargs):
       print a, args, kwargs
 
-
+# function with default arguments
 def prettyprint(str, prefix = '**** ', suffix = ' ****'):
       print prefix + str + suffix
-
+      
+# function with variable arguments
 def with_args(*args):
       print type(args)
       for i in args:
             print 'type: ', type(i), ' arg=', i
 
+# function with keyword arguments
 def with_kwargs(**kwargs):
       print type(kwargs)
       for k, v in kwargs.iteritems():

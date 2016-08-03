@@ -3,7 +3,7 @@ import os
 
 if __name__ == '__main__':
 
-      input = '..\README.md'
+      input = '../../README.md'
       
       # reading a text file
       with open(input) as fi:

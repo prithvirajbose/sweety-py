@@ -40,4 +40,6 @@ if __name__ == '__main__':
       a[0] = -100
       print '> update the first element: ', a
       del a[0]
-      print '> delete the first element: ', a 
+      print '> delete the first element: ', a
+
+      del a # deletes the whole list

@@ -8,9 +8,13 @@ if __name__ == '__main__':
       print '> value of key=20 :', d.get(20, 'Key not found')
       print '> key=2 exists? :', 2 in d
 
-      print '> print the dict contents'
+      print '> print the dict contents using keys() method'
       for i in d.keys():
             print i, d[i]
+            
+      print '> print the dict contents using iteritems() method'
+      for k, v in d.iteritems():
+            print k, v
 
       del d[5]
       print '> key=5 exists? :', 5 in d

@@ -27,10 +27,11 @@ class SocketClient(object):
       to the client.
       
       For the unfortunate ones stuck with Windows OS, I've
-      written a Java socket server class named ServerSocket.java.
-      Run that class to receive message from this client.
+      written an application to send/receive messages from socket,
+      https://github.com/prithvirajbose/rss.
+      Run as 'java RSS -r port_number' to receive messages from this client.
       """
-      def __init__(self, hostname = 'localhost', port = 2016):
+      def __init__(self, hostname = 'localhost', port = 9999):
             self._socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             self._hostname = hostname
             self._port = port

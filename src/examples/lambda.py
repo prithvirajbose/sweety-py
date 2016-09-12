@@ -25,7 +25,7 @@ def mrf(t):
       t = filter(lambda student: student[1] < 50, t)
 
       # find the avg score.
-      return reduce(lambda total, student: total + student[1], t, 0)/len(t)
+      return reduce(lambda total, student: total + student[1], t, 0)/float(len(t))
 
 if __name__ == '__main__':
       f = lambda x, y, z: x + y + z

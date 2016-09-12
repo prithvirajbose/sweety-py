@@ -4,7 +4,7 @@ if __name__ == '__main__':
       try:
             print '> 1 before inner exception is raised...'
             try:
-                  5/0
+                  5/2.0
             except ZeroDivisionError as e:
                   print e
             else:

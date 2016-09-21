@@ -3,10 +3,10 @@ class Shape(object):
       """
       Defines the shape abstraction
       """
-      def area():
+      def area(self):
             pass
 
-      def perimeter():
+      def perimeter(self):
             pass
 
 class Rect(Shape):

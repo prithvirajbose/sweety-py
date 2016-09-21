@@ -5,7 +5,6 @@ class ParserError(Exception):
     In addition to 'message', use *args to supply 'module name' and
     'line number' of where the parsing error occurred.
     """
-
     def __init__(self, *args):
         super(ParserError, self).__init__(args)
     
